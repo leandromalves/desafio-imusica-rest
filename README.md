@@ -3,9 +3,9 @@
 
 ### Decisões
 
-Criei um serviço Rest para realização das operações de CRUD de Produtos. Utilizei banco de dados MongoDB já embutido na aplicação através do Spring Boot.
+Criei um serviço Rest para realização das operações de CRUD de Produtos. Utilizei banco de dados MongoDB já embutido na aplicação através do Spring Boot. Para evitar problemas ao manipular a quantidade de um produto, utilizei lock otimista através da anotação @Version do Spring.
 
-Como executar: 
+### Como executar: 
 
 - Basta executar a classe java "DesafioImusicaRestApplication". 
 
