@@ -1,7 +1,7 @@
 # desafio-imusica-rest
-Desafio Api Produtos
+# Desafio Api Produtos
 
-API REST de PRODUTOS
+### API REST de PRODUTOS
 
 Como executar: 
 
@@ -13,12 +13,16 @@ URL BASE: http://localhost:8080/produtos
 
 Serviços: 
 
-- Listar Todos: 
+- Listar Todos.
+
 GET: http://localhost:8080/produtos
 
 - Cadastrar Produto: 
+
 POST: http://localhost:8080/produtos
-Exemplo JSON: 
+
+Exemplo JSON:
+
 {
 	"nome": "Celular",
 	"descricao": "Smartphone 5 polegadas",
@@ -27,7 +31,9 @@ Exemplo JSON:
 }
 
 - Buscar por Nome do Produto: 
+
 GET: http://localhost:8080/produtos?nome=nomeDoProduto
+
 {
   "id": "5b37fa462184544ac62d8888"
   "version": 0,
@@ -38,13 +44,17 @@ GET: http://localhost:8080/produtos?nome=nomeDoProduto
 }
 
 - Buscar por id do Produto: 
+
 GET: http://localhost:8080/produtos/{id}
 
 -Atualizar Produto:
+
 PUT: http://localhost:8080/produtos/
 
 - Deletar Produto:
+
 DELETE: - Buscar por Nome do Produto: 
+
 GET: http://localhost:8080/produtos/{id}
 
 
