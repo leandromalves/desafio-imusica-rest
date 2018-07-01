@@ -1,7 +1,9 @@
 # desafio-imusica-rest
-# Desafio Api Produtos
+## Desafio API Rest de Produtos
 
-### API REST de PRODUTOS
+### Decisões
+
+Criei um serviço Rest para realização das operações de CRUD de Produtos. Utilizei banco de dados MongoDB já embutido na aplicação através do Spring Boot.
 
 Como executar: 
 
@@ -9,9 +11,10 @@ Como executar:
 
 Automaticamente serão "levantados" o banco MongoDB e o Tom Cat. Ambos embarcados. Não é necessária nenhuma configuração.
 
-URL BASE: http://localhost:8080/produtos
 
 ## Serviços: 
+
+URL BASE: http://localhost:8080/produtos
 
 ### - Listar Todos:
 
