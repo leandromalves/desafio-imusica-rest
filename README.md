@@ -53,8 +53,6 @@ PUT: http://localhost:8080/produtos/
 
 ### - Deletar Produto:
 
-DELETE: - Buscar por Nome do Produto: 
-
-GET: http://localhost:8080/produtos/{id}
+DELETE: http://localhost:8080/produtos/{id}
 
 
