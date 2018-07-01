@@ -3,6 +3,7 @@ package br.com.imusica.desafio.model;
 import java.math.BigDecimal;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
@@ -10,6 +11,9 @@ public class Produto {
 	
 	@Id
     private String id;
+	
+	@Version
+    private Long version;
 	
 	private String nome;
 	private String descricao;
@@ -21,6 +25,12 @@ public class Produto {
 	}
 	public void setId(String id) {
 		this.id = id;
+	}
+	public Long getVersion() {
+		return version;
+	}
+	public void setVersion(Long version) {
+		this.version = version;
 	}
 	public String getNome() {
 		return nome;

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -199,7 +200,7 @@ public class ProdutoResource {
 		
 		if(StringUtils.isEmpty(id)) {
 			logger.info(
-				"id invalid: {} .",
+				"id invalido: {} .",
 				id
 			);
 			return ResponseEntity
@@ -231,6 +232,54 @@ public class ProdutoResource {
 		
 		logger.info("{} deletado.", produto);
 		
+		return 
+			ResponseEntity
+				.noContent()
+					.build();
+	}
+	
+	@PutMapping
+	public ResponseEntity<Produto> atualizar(@RequestBody Produto produto) {
+		
+		logger.info(
+				"atualizando: {} .",
+				produto
+			);
+
+		if(Objects.isNull(produto)
+				|| StringUtils.isEmpty(produto.getId())) {
+			logger.info(
+					"produto invalido: {} .",
+					produto
+				);
+			return ResponseEntity
+					.badRequest()
+					.build();
+		}
+
+		final Produto produtoAtual = 
+				produtoRepository
+					.findById(produto.getId());
+		
+		if(Objects.isNull(produtoAtual)) {
+			logger.error(
+					"Erro ao deletar. {} não encontrado.", 
+					produto
+				);
+			return 
+				ResponseEntity
+					.notFound()
+					.build();
+		}
+
+		final Produto produtoAtualizado = 
+				produtoRepository.save(produto);
+
+		logger.info(
+			"{} atualizado.",
+			produtoAtualizado
+		);
+
 		return 
 			ResponseEntity
 				.noContent()
