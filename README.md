@@ -11,13 +11,13 @@ Automaticamente serão "levantados" o banco MongoDB e o Tom Cat. Ambos embarcado
 
 URL BASE: http://localhost:8080/produtos
 
-Serviços: 
+## Serviços: 
 
-- Listar Todos.
+### - Listar Todos:
 
 GET: http://localhost:8080/produtos
 
-- Cadastrar Produto: 
+### - Cadastrar Produto: 
 
 POST: http://localhost:8080/produtos
 
@@ -30,7 +30,7 @@ Exemplo JSON:
 	"quantidade": 12
 }
 
-- Buscar por Nome do Produto: 
+### - Buscar por Nome do Produto: 
 
 GET: http://localhost:8080/produtos?nome=nomeDoProduto
 
@@ -43,15 +43,15 @@ GET: http://localhost:8080/produtos?nome=nomeDoProduto
 	"quantidade": 12
 }
 
-- Buscar por id do Produto: 
+### - Buscar por id do Produto: 
 
 GET: http://localhost:8080/produtos/{id}
 
--Atualizar Produto:
+### - Atualizar Produto:
 
 PUT: http://localhost:8080/produtos/
 
-- Deletar Produto:
+### - Deletar Produto:
 
 DELETE: - Buscar por Nome do Produto: 
 
